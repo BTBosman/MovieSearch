@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import ProfileArr from '../../app/class';
-import {DatabaseService} from 'src/app/database.service';
+import { DatabaseService } from 'src/app/database.service';
 
 @Component({
   selector: 'app-details',

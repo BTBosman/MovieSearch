@@ -14,38 +14,38 @@ $color-grey-dark-2: #777;
 $color-grey-dark-3: #999;
 
 
-    
-    h1 {
-        color: #ccc;
-        align-content: center;
-        justify-content: center;
-        font-size: 3rem;
-        font-weight: 400;
-        font-family: fantasy;
-        padding: 5px;
-        
-      }
-    
-      h5 {
-        color: #ccc;
-        align-content: center;
-        font-family: fantasy;
-        font-size: 2rem;
-        font-weight: 400;
-        color: $color-primary-dark;
-        padding: 5px;
-        
-      }
+
+h1 {
+  color: #ccc;
+  align-content: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: fantasy;
+  padding: 5px;
+
+}
+
+h5 {
+  color: #ccc;
+  align-content: center;
+  font-family: fantasy;
+  font-size: 2rem;
+  font-weight: 400;
+  color: $color-primary-dark;
+  padding: 5px;
+
+}
 
 
-  
 
-  .welcomeSpan{
-    color: $color-primary-dark;
+
+.welcomeSpan {
+  color: $color-primary-dark;
 }
 
 .moviesSpan {
-    color: #ccc;
+  color: #ccc;
 }
 
 
@@ -75,7 +75,7 @@ $color-grey-dark-3: #999;
 
 li {
   display: inline;
-  
+
 }
 
 .content {

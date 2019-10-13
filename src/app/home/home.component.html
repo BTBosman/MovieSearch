@@ -1,32 +1,29 @@
 <div class="container">
-        
-        <div class="content">
-          
-      
-          <div class="search">
-            <input class="searchInput" type="text" placeholder="search movies..." #movieName>
-            <button class="searchbtn" (click)="searchByTitle(movieName.value)">Search</button>
-          </div>
-      
-              <div class="avatarcnt">
-                  <div (click)="view(x);page='movieDetails';productDetails()" routerLink="/details" routerLinkActive="active" *ngFor="let x of movieList;let p of path;"
-                    class="avatar">
-                    <img src="{{x.poster_path}}" alt="Image Not Available" class="avatar__image">
-                    <div class="avatar__textcontainer">
-                      <p class="avatar__textcontainer--name">{{x.title}}</p>
-                      <p class="avatar__textcontainer--category"></p>
-                    </div>
-                  </div>
-                  <div class="nocontent" *ngIf="movieList == 0 || movieList == undefined ">
-                      <div class="nocontent__contents">
-                        <img class="nocontent__contents--image" src="../assets/sound-wavesgrey.png" alt="">
-                        <p class="nocontent__contents--text" style="color: white">No content,<br/> Search Movie.</p>
-                      </div>
-                    </div>
-                </div>
-      
-          </div>
-  
+
+  <div class="content">
+
+    <div class="search">
+      <input class="searchInput" type="text" placeholder="search movies..." #movieName>
+      <button class="searchbtn" (click)="searchByTitle(movieName.value)">Search</button>
+    </div>
+
+    <div class="avatarcnt">
+      <div (click)="view(x);page='movieDetails';productDetails()" routerLink="/details" routerLinkActive="active"
+        *ngFor="let x of movieList;let p of path;" class="avatar">
+        <img src="{{x.poster_path}}" alt="Image Not Available" class="avatar__image">
+        <div class="avatar__textcontainer">
+          <p class="avatar__textcontainer--name">{{x.title}}</p>
+          <p class="avatar__textcontainer--category"></p>
         </div>
-      
-      
+      </div>
+      <div class="nocontent" *ngIf="movieList == 0 || movieList == undefined ">
+        <div class="nocontent__contents">
+          <img class="nocontent__contents--image" src="../assets/sound-wavesgrey.png" alt="">
+          <p class="nocontent__contents--text" style="color: white">No content,<br /> Search Movie.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

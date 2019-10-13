@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  
-  constructor( private router: Router){
+
+  constructor(private router: Router) {
   }
 
-  
+
 }

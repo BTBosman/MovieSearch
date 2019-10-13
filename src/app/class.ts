@@ -1,10 +1,10 @@
-export interface obj{
-    poster:string;
-    movie_title:string;
-    type:string;
-    year:string;
+export interface obj {
+    poster: string;
+    movie_title: string;
+    type: string;
+    year: string;
 
-    }
+}
 
-    var ProfileArr = new Array();
-    export default ProfileArr;
+var ProfileArr = new Array();
+export default ProfileArr;
