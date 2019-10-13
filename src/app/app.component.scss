@@ -1,0 +1,88 @@
+$color-primary-light: #EFD268;
+$color-primary-dark: #AB8E21;
+$color-danger: #f53d3d;
+$color-secondary-light: #794DA1;
+$color-secondary-dark: #4A1D73;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+
+    
+    h1 {
+        color: #ccc;
+        align-content: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: fantasy;
+        padding: 5px;
+        
+      }
+    
+      h5 {
+        color: #ccc;
+        align-content: center;
+        font-family: fantasy;
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-primary-dark;
+        padding: 5px;
+        
+      }
+
+
+  
+
+  .welcomeSpan{
+    color: $color-primary-dark;
+}
+
+.moviesSpan {
+    color: #ccc;
+}
+
+
+.logo {
+
+  width: 35%;
+  margin-top: 4px;
+  margin-left: 27%;
+
+}
+
+.btn {
+  font-size: 3rem;
+  font-weight: 500;
+  height: 40px;
+  background: linear-gradient(rgba($color-grey-dark-2, .8), rgba($color-primary-dark, .9));
+  // -webkit-background-clip: text;
+  color: #ccc;
+  text-align: center;
+  justify-content: center;
+  width: 25%;
+  border-radius: 6px;
+  box-shadow: solid 0 0 15px 15px $color-grey-dark-2;
+  text-decoration: none;
+
+}
+
+li {
+  display: inline;
+  
+}
+
+.content {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: -5px;
+  overflow: auto;
+  margin-left: 5%;
+}
