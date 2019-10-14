@@ -2,14 +2,19 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
 
   movieList = new Array();
+  image;
+  defaultImage = '../assets/logodd.png';
+
   title;
-  baseUrl = "http://image.tmdb.org/t/p/w185"
+  baseUrl = "http://image.tmdb.org/t/p/w185";
+
   constructor(public http: HttpClient) { }
 
   searchMovieByTitle(title) {
@@ -31,14 +36,19 @@ export class DatabaseService {
         console.log(details.length);
         for (var x = 0; x < details.length; x++) {
           let index = data.results[x];
-
+          if (index.poster_path == null || index.poster_path == undefined) {
+            this.image = this.defaultImage;
+          }
+          else {
+            this.image = this.baseUrl + index.poster_path
+          }
           let obj = {
             title: index.title,
             overview: index.overview,
             backdrop_path: this.baseUrl + index.backdrop_path,
             release_date: index.release_date,
             popularity: index.popularity,
-            poster_path: this.baseUrl + index.poster_path,
+            poster_path: this.image,
             video: index.video,
           }
           this.movieList.push(obj);
