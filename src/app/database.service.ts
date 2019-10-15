@@ -10,7 +10,7 @@ export class DatabaseService {
 
   movieList = new Array();
   image;
-  defaultImage = '../assets/logodd.png';
+  defaultImage = '/assets/logodd.png';
 
   title;
   baseUrl = "http://image.tmdb.org/t/p/w185";
