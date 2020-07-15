@@ -4,6 +4,8 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { obj } from '../../app/class';
 import ProfileArr from '../../app/class';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
   movie_title: string;
   type: string;
   year: string;
+  moviesFound: Boolean;
 
   path = [];
   overview: any;
@@ -31,13 +34,39 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchByTitle(movieName) {
-    this.database.searchMovieByTitle(movieName).then((data: any) => {
+  searchByTitle() {
+
+    this.moviesFound = false;
+
+    Swal.fire({
+      title: 'Search For movie',
+      input: 'text',
+      showCancelButton: true,
+      width: '50rem',
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
+        }
+        else {
+
+          this.database.searchMovieByTitle(value).then((data: any) => {
       console.log(data)
       this.movieList = data;
       console.log(this.movieList);
       let count = 0;
-      console.log(this.movieList.length)
+      console.log(this.movieList.length);
+
+      Swal.fire({
+        title: 'Movies found!',
+        imageUrl: '/assets/logodd.png',
+        imageWidth: 60,
+        imageHeight: 40,
+        width: '50rem',
+        imageAlt: 'Custom image',
+      });
+
+      this.moviesFound = true;
+  
       //  for(var x = 0;x < this.movieList.length;x++){
       //   this.path.push(this.baseUrl + this.movieList[x].poster_path);
       //   count++;
@@ -45,9 +74,23 @@ export class HomeComponent implements OnInit {
       //  console.log(this.path)
 
     }).catch(error => {
-      console.log("movie not found or results to large", error)
+      console.log("movie not found or results to large", error);
+      Swal.fire('Ooops..!',error);
     });
+
+    
+
+        }
+
+        
+      }
+      
+    })
+
+    
+    
   }
+
 
 
   view(x) {
