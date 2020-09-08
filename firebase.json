@@ -1,9 +1,8 @@
 {
   "hosting": {
-    "public": "y",
+    "public": "dist/MovieApp",
     "ignore": [
       "firebase.json",
-      "**/.*",
       "**/node_modules/**"
     ],
     "rewrites": [

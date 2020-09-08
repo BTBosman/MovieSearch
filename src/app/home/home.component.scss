@@ -14,7 +14,7 @@ $color-grey-dark-2: #777;
 $color-grey-dark-3: #999;
 
 .info {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .bodd {
@@ -61,7 +61,7 @@ $color-grey-dark-3: #999;
   justify-content: center;
   width: 100vw;
   height: 100%;
-  margin-left: 5.5%;
+  margin-left: 2%;
 
   opacity: .5;
 
@@ -92,9 +92,12 @@ $color-grey-dark-3: #999;
 
   .avatarcnt {
     // background: #4A1D73;
-    width: 100%;
+    align-content: center;
+    width: 110%;
     display: flex;
-    flex-flow: row wrap;
+    flex: 7;
+    flex-flow: row wrap; margin: 5px;
+    
 
     // overflow-y: scroll;
     // overflow-x: scroll;
