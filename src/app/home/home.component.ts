@@ -52,9 +52,7 @@ export class HomeComponent implements OnInit {
           this.database.searchMovieByTitle(value).then((data: any) => {
       console.log(data)
       this.movieList = data;
-      console.log(this.movieList);
       let count = 0;
-      console.log(this.movieList.length);
 
       Swal.fire({
         title: 'Movies found!',
@@ -63,6 +61,8 @@ export class HomeComponent implements OnInit {
         imageHeight: 40,
         width: '50rem',
         imageAlt: 'Custom image',
+        showConfirmButton: false,
+        timer: 1000
       });
 
       this.moviesFound = true;
@@ -74,7 +74,7 @@ export class HomeComponent implements OnInit {
       //  console.log(this.path)
 
     }).catch(error => {
-      console.log("movie not found or results to large", error);
+     
       Swal.fire('Ooops..!',error);
     });
 
